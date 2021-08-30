@@ -5,7 +5,6 @@ import initCACCL from 'caccl/client/cached';
 import React, { Component } from 'react';
 
 // Import resources
-import logo from './logo.svg';
 import './App.css';
 import Canvas from './Canvas';
 
@@ -41,12 +40,12 @@ class App extends Component {
         });
       }
 
-      // // > App is not authorized
-      // if (!status.authorized) {
-      //   return this.setState({
-      //     message: 'We don\'t have access to Canvas. Please re-launch the app.',
-      //   });
-      // }
+      // > App is not authorized
+      if (!status.authorized) {
+        return this.setState({
+          message: 'We don\'t have access to Canvas. Please re-launch the app.',
+        });
+      }
     } catch (err) {
       return this.setState({
         message: `Error while requesting state from server: ${err.message}`,
