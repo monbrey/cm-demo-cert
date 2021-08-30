@@ -41,12 +41,12 @@ class App extends Component {
         });
       }
 
-      // > App is not authorized
-      if (!status.authorized) {
-        return this.setState({
-          message: 'We don\'t have access to Canvas. Please re-launch the app.',
-        });
-      }
+      // // > App is not authorized
+      // if (!status.authorized) {
+      //   return this.setState({
+      //     message: 'We don\'t have access to Canvas. Please re-launch the app.',
+      //   });
+      // }
     } catch (err) {
       return this.setState({
         message: `Error while requesting state from server: ${err.message}`,
