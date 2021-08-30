@@ -3,9 +3,9 @@ const initCACCL = require('caccl/server/react');
 
 // Initialize CACCL
 const app = initCACCL({
-	disableAuthorisation: true,
+	disableAuthorization: true,
 	disableClientSideAPI: true,
-	disabledServerSideAPI: true,
+	disableServerSideAPI: true,
 	installationCredentials: {
 		consumer_key: "cert",
 		consumer_secret: "cert"
